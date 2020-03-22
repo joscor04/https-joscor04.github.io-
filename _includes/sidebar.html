@@ -1,0 +1,142 @@
+<div class="page-header">
+  <h3>
+    {{ site.title }}
+    {% if site.subtitle %}<br/><small>{{ site.subtitle }}</small>{% endif %}
+  </h3>
+</div>
+
+<p class="text-center">
+  <img width="200px" src="{{ site.url }}/img/logo-360x360.png" alt="{{ site.title }} logo">
+</p>
+
+{% if site.description %}<p>{{ site.description }}</p>{% endif %}
+
+<p class="text-center">
+  <script class="podlove-subscribe-button"
+          src="/subscribe-button/javascripts/app.js"
+          data-language="{{ site.language }}"
+          data-size="medium auto"
+          data-style="filled"
+          data-json-data="podcastData"
+          data-colors="#FC6E51;green;blue">
+  </script>
+  <script>
+    window.podcastData = {
+      "title": "{{ site['title']}}",
+      "subtitle": "{{ site['subtitle']}}",
+      "description": "{{ site['description']}}",
+      "cover": "{{ site.url }}/img/logo-360x360.png",
+      "feeds": [
+      {% for feed in site['episode_feed_formats'] %}
+        {
+          "type": "audio",
+          "format": "{{ feed }}",
+          "url": "{{ site['url']}}/episodes.{{ feed }}.rss",
+          "directory-url-itunes": "{{ site['itunes_url']}}",
+          "variant": "high"
+        },
+      {% endfor %}
+      ]
+    }
+  </script>
+</p>
+
+<hr/>
+
+Die Statistiken über unsere Strava-Gruppe haben wir der Datensparsamkeit halber auf die neue Seite
+<a href="/letzte_laeufe">letzte Läufe</a> verschoben.
+
+<hr/>
+
+<h4>RSS-Feeds</h4>
+
+<ol type="i">
+  {% for feed in site['episode_feed_formats'] %}
+    <li><a href="{{ site['url']}}/episodes.{{ feed }}.rss"><i class="fa fa-rss"></i> {{ feed }}-Feed</a></li>
+  {% endfor %}
+</ol>
+
+
+<h4>JSON-Feeds</h4>
+
+<ol type="i">
+  {% for jsonfeed in site['json_feed_formats'] %}
+    <li><a href="{{ site['url']}}/feed.{{ jsonfeed }}.json"><i class="fa fa-rss-square"></i> {{ jsonfeed }}-JSON-Feed</a></li>
+  {% endfor %}
+</ol>
+
+
+<h4>Feedback</h4>
+
+<p>bitte per E-Mail an <a href="mailto:feedback@3-schweinehun.de">feedback@3-schweinehun.de</a>!</p>
+
+
+<h4>Directories</h4>
+
+<ol type="i">
+  <li>Apple-<a href="https://itunes.apple.com/at/podcast/3-schweinehunde/id1294866438?mt=2"><i class="fa fa-apple"></i> Itunes</a></li>
+  <li><a href="https://panoptikum.io/podcasts/23963"><img src="/img/panoptikum.ico"/> Panoptikum</a></li>
+  <li><a href="https://fyyd.de/podcast/3-schweinehunde/0"><img height="16" src="/img/fyyd.ico"/> Fyyd</a></li>
+
+</ol>
+
+
+<h4>Credits</h4>
+
+<ul>
+  <li>Logo: <a href="https://www.strava.com/athletes/25455383">Birgit</a> &amp; Steve</li>
+</ul>
+
+<h4>Lizenz</h4>
+
+{% if site.license_url %}
+  <a rel="license" href="{{ site.license_url }}">
+    {% if site.license_image_url %}
+      <img alt="Creative Commons License" style="border-width:0" src="/img/88x31.png" />
+    {% else %}
+      {{ site.license }}
+    {% endif %}
+  </a>
+{% endif %}
+
+<hr/>
+
+{% if site.flattr_uid %}
+  <span class="pull-left">{{ site | flattr_button }}</span>
+{% endif %}
+
+<p>
+  <span>Spendet uns Auphonic-Credits:<br/>
+      <a href="https://auphonic.com/donate_credits?user=TJstudio">
+        <img src="{{ site.url }}/img/auphoniclogo_144.jpg" alt="Auphonic Logo">
+      </a>
+  </span>
+</p>
+
+<h4>Twitter</h4>
+
+<p>
+  <a href="https://twitter.com/{{ site.twitter_nick }}" class="button btn-primary btn-sm">
+    <i class="fab fa-twitter"></i> @{{ site.twitter_nick }}
+  </a>
+</p>
+<p>
+  <a href="https://twitter.com/hellmue" class="button btn-primary btn-sm">
+    <i class="fab fa-twitter"></i> @hellmue
+  </a> &nbsp; aka Dominic
+</p>
+<p>
+  <a href="https://twitter.com/johndillinger15" class="button btn-primary btn-sm">
+    <i class="fab fa-twitter"></i> @johndillinger15 ‏
+  </a> &nbsp; aka Steve
+ <pi>
+<p>
+  <a href="https://twitter.com/informatom" class="button btn-primary btn-sm">
+    <i class="fab fa-twitter"></i> @informatom
+  </a> &nbsp; aka Stefan
+</p>
+<p>
+  <a href="https://twitter.com/theTJ23" class="button btn-primary btn-sm">
+    <i class="fab fa-twitter"></i> @theTJ23
+  </a> &nbsp; aka TJ
+</p>
