@@ -1,5 +1,27 @@
----
-layout: jsonfeed
-format: mp3
----
-{{ content }}
+{"version": "https://jsonfeed.org/version/1",
+ "title": "Octopod",
+ "home_page_url": "https://irazugrowers.github.io/A//",
+ "feed_url": "https://irazugrowers.github.io/A//feed.json",
+ "description": "Birgit, Dominic, Stefan und Steve und ihre 3 Schweinehunde trainieren auch in Season 2 munter weiter.",
+ "user_comment": "Birgit, Dominic, Stefan und Steve und ihre 3 Schweinehunde trainieren auch in Season 2 munter weiter.",
+ "icon": "https://irazugrowers.github.io/A//apple-touch-icon-precomposed.png",
+ "favicon": "https://irazugrowers.github.io/A//favicon.ico",
+ "expired": false,
+ "author": {
+   "name": "Birgit, Dominic, Stefan und Steve",
+   "url": null
+ },
+ "items": [
+   {"id": "2c47c473",
+    "title": "Episode 0",
+    "summary": "",
+    "content_text": "Shownotes and Linkshola puse un audio aleman y no entiendo nada",
+    "content_html": "<h2 id=\"shownotes-and-links\">Shownotes and Links</h2><p>hola puse un audio aleman y no entiendo nada</p>",
+    "url": "https://irazugrowers.github.io/A//2020/03/21/episode-0.html",
+    "date_published": "2020-03-21T00:00:00-06:00",
+    "date_modified": "2020-03-21T00:00:00-06:00",
+    "author": {
+      "name": "Birgit, Dominic, Stefan und Steve"
+    }
+  }]
+}
