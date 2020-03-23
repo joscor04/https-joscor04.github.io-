@@ -1,5 +1,5 @@
-title: Octopod
-url: https://irazugrowers.github.io
+title: "irazu Growers"
+url: https-joscor04.github.io
 subtitle: wir laufen noch immer
 description: Birgit, Dominic, Stefan und Steve und ihre 3 Schweinehunde trainieren auch in Season 2 munter weiter.
 author: Birgit, Dominic, Stefan und Steve
@@ -15,7 +15,7 @@ episodes_per_feed_page: 100
 date_format: "ordinal"
 
 twitter_nick: 3schweinehunde
-language: es-ES
+language: en
 explicit: 'no'  # 'yes'/'no'/clean
 license: CC BY 4.0
 license_url: https://creativecommons.org/licenses/by/4.0/
@@ -25,9 +25,12 @@ license_image_url: https://i.creativecommons.org/l/by/4.0/88x31.png
 # itunes_url: "https://itunes.apple.com/at/podcast/myname/id#myid#"
 ## Isso comments #########################################################
 use_isso: no # set to 'yes' to include isso comments form
+plugins:
 
-plugins: [jekyll-octopod]
-theme: minima
+  - jekyll-octopod
+
 exclude: [README.md, LICENSE]
-
+theme: cayman
 future: false
+
+theme: jekyll-theme-cayman
